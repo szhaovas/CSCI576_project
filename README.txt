@@ -1,4 +1,4 @@
-USC CSCI576 final team project
+USC CSCI576 multimedia system final team project
 Original repo at https://github.com/sunshuu/multimedia-project
 This is a cleaned-up version of the memory branch from the source
 
