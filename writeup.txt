@@ -1,0 +1,22 @@
+Player features:
+- Uses rolling buffer which loads 300 frames at a time; buffer updated at the end of each 300-frame window; might cause lag
+- Hard-sync at the end of each 300-frame window
+
+Scene split:
+- Uses scenedetect package
+
+Ad scene detection tests:
+- Short scenes tend to be ads
+- Loud scenes tend to be ads
+- Spectral Entropy test by first converting to FFT space and then calculating histogram entropy; low entropy (low noise) scenes tend to be ads
+
+Bounding box:
+- Match extracted Orb features from logo image and frame
+- Lowe's ratio test to identify good matches
+- If enough good matches, compute homography on logo image's square to generate bounding box
+
+My contributions:
+- wrote the player
+- spectral entropy test for ad scene detection
+- memory optimization for bounding box
+- research ideas in general (I suggested using orb feature matching)
